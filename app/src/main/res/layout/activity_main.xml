@@ -10,13 +10,14 @@
 
     <Button
         android:id="@+id/button"
-        android:layout_width="143dp"
-        android:layout_height="51dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="488dp"
         android:background="#2A9BD8"
-        android:fontFamily="@font/advent_pro_thin"
+        android:fontFamily="@font/allerta_stencil"
         android:text="FLAMES"
         android:textColor="#0E0E0E"
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.487"

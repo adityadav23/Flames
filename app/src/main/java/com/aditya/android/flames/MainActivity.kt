@@ -1,6 +1,9 @@
 package com.aditya.android.flames
 
+import android.content.Context
 import android.os.Bundle
+import android.view.View
+import android.view.inputmethod.InputMethodManager
 import android.widget.Switch
 import androidx.appcompat.app.AppCompatActivity
 import com.aditya.android.flames.databinding.ActivityMainBinding
@@ -21,10 +24,17 @@ class MainActivity : AppCompatActivity() {
         var length: Int = findLength(first,second)
         var ans = flames(length)
 
-        binding.resultTextview.text = ans
+        binding.resultTextview.text = "FLAMES is $ans"
+            hideKeyboard(it)
         }
 
     }
+
+    private fun hideKeyboard(it: View) {
+        val imm = getSystemService(INPUT_METHOD_SERVICE) as? InputMethodManager
+        imm?.hideSoftInputFromWindow(it.windowToken, 0)
+    }
+
     private fun flamesStringResponse(ans:Char):String{
         var response: String
         when(ans){

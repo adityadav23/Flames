@@ -20,7 +20,8 @@ class MainActivity : AppCompatActivity() {
 
         var first: String = binding.firstEditText.text.toString().trim()
         var second: String = binding.secondEditText.text.toString().trim()
-
+          binding.firstEditText.isCursorVisible = false
+            binding.secondEditText.isCursorVisible = false
         var length: Int = findLength(first,second)
         var ans = flames(length)
 
